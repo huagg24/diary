@@ -1,0 +1,41 @@
+::-webkit-scrollbar 滚动条整体部分，可以设置宽度啥的
+::-webkit-scrollbar-button 滚动条两端的按钮
+::-webkit-scrollbar-track  外层轨道
+::-webkit-scrollbar-track-piece  内层滚动槽
+::-webkit-scrollbar-thumb 滚动的滑块
+::-webkit-scrollbar-corner 边角
+::-webkit-resizer 定义右下角拖动块的样式
+
+
+
+
+IE
+scrollbar-arrow-color: color; /*三角箭头的颜色*/
+scrollbar-face-color: color; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+scrollbar-3dlight-color: color; /*立体滚动条亮边的颜色*/
+scrollbar-highlight-color: color; /*滚动条的高亮颜色（左阴影？）*/
+scrollbar-shadow-color: color; /*立体滚动条阴影的颜色*/
+scrollbar-darkshadow-color: color; /*立体滚动条外阴影的颜色*/
+scrollbar-track-color: color; /*立体滚动条背景颜色*/
+scrollbar-base-color:color; /*滚动条的基色*/
+
+
+火狐
+//默认样式
+html {
+  * {
+    scrollbar-color:#f33 green;  //两个颜色 上面红色 下面绿色
+    scrollbar-width:thin;      //宽度  窄
+  }
+}
+
+
+scrollbar-width: auto; /* 系统默认的滚动条宽度 */
+scrollbar-width: thin; /* 系统提供的瘦滚动条宽度，或者比默认滚动条宽度更窄的宽度 */
+scrollbar-width: none; /* 不显示滚动条，但是该元素依然可以滚动 */
+
+scrollbar-color: auto; /* 在没有任何其他相关滚动条颜色属性的情况下，滚动条的轨道部分默认平台渲染。 */
+scrollbar-color: dark; /* 显示黑色滚动条，可以是平台提供的滚动条的深色变体，也可以是带深色的自定义滚动条。 */
+scrollbar-color: light; /* 显示一个轻量滚动条，可以是平台提供的滚动条的轻微变体，也可以是带有浅色的自定义滚动条。 */
+
+scrollbar-color: rebeccapurple green;   /* 将第一种颜色应用于滚动条拇指，第二种颜色应用于滚动条轨道。. */
