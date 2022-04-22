@@ -1,0 +1,36 @@
+//webpack打包入门
+//引入path库
+const path = require（‘path’）
+
+//规定的格式
+module.exports = {
+   mode:'development',  // 模块类型
+   entry:path.join(__dirname,'src','index.js'),//（全局固定写法，目录名字，文件名字）
+   output:{      //output将打包文件放到指定的目录
+    path:path.join(__dirname,'dist'),//自己定义的目录
+    filename:'bundle.js'//自己定义的文件名字
+   },
+   
+   
+   
+   //如果想同时打包html和js文件
+//引入path库
+const path = require（‘path’）
+//引入插件
+const HtmlWebpackPlugin = require（'html-webpack-plugin'）
+
+//规定的格式
+module.exports = {
+   mode:'development',  // 模块类型
+   entry:path.join(__dirname,'src','index.js'),//（全局固定写法，目录名字，文件名字）
+   output:{      //output将打包文件放到指定的目录
+    path:path.join(__dirname,'dist'),//自己定义的目录
+    filename:'bundle.js'//自己定义的文件名字
+   },
+   plugins:[  //调HtmlWebpackPlugin这个插件的plugins方法
+    new HtmlWebpackPlugin({  //new 一下这个对象
+      template：path.join（__dirname,'src','index.html'),//（全局固定写法，目录名字，文件名字）
+			filename:'index.html'//自己定义的文件名字
+    })
+   ]
+ }
