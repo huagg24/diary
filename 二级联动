@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var proList=["北京","山东","河南","河北"];
+		var allCityList=[
+					["东城","西城","朝阳","丰台","石景山"],
+					["济南","青岛","泰安","威海","潍坊","枣庄"],
+					["郑州","开封","洛阳","平顶山","安阳","鹤壁","新乡"],
+					["石家庄","唐山","邢台"]
+				];
+		
+		function f1(){
+			var pro=document.getElementById("province");
+			pro.length=proList.length+1;
+			for(var i=1;i<pro.length;i++){
+				pro[i].innerHTML=proList[i-1];
+				pro[i].value=i;
+			}
+		}
+		
+		function f2(){
+			var city=document.getElementById("city");
+			var pro=document.getElementById("province");
+			city.value=0;
+			var cityList=allCityList[pro.value-1];
+			city.length=cityList.length+1;
+			for(var i=1;i<city.length;i++){
+				city[i].innerText=cityList[i-1];
+				city[i].value=i;
+			}
+		}
+	</script>
+	<body>
+		
+		<form action="#" method="get">
+			<select name="province" id="province" onfocus="f1()" onchange="f2()">
+				<option value="0">选择省份</option>
+			</select> 省
+			<select name="city" id="city">
+				<option value="0">选择城市</option> 
+			</select> 市/区
+		</form>
+	</body>
+</html>
